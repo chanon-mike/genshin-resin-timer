@@ -81,7 +81,7 @@ function calculateEachResin(currentResin) {
             display(fullResinTime, "resin"+allResin[i]);
         }
         else {
-            document.getElementById("resin"+allResin[i]).textContent = "#############";
+            document.getElementById("resin"+allResin[i]).textContent = "#####";
         }
         
     }

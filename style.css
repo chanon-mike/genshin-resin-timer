@@ -78,6 +78,10 @@ body {
 /* Result */
 /* ------ */
 
+#result {
+    padding-bottom: 1%;
+}
+
 #full-resin {
     padding-top: 1%;
     padding-bottom: 3%;
@@ -97,7 +101,7 @@ body {
     left: 0;
     bottom: 0;
     width: 100%;
-    padding: 1%;
+    padding: 0.5%;
 }
 
 /* --------- */
@@ -106,4 +110,13 @@ body {
 
 .container-fluid {
     padding: 2% 0;
+}
+
+@media only screen and (max-width: 426px){
+    /* For smartphone: */
+    #title {text-align: center; padding-bottom: 3%;}
+    .big-header {font-size: 2.75rem;}
+    #resin-input {margin: 5% 5% 20%;}
+    #full-resin {padding-bottom: 20%;}
+    #result {padding-bottom: 10%;}
 }
