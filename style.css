@@ -1,0 +1,22 @@
+body {
+    text-align: center;
+    
+}
+
+#title {
+    margin: 3%;
+}
+
+#full-resin {
+    margin: 5%;
+}
+
+#resin-input {
+    display:inline-block;
+    position:relative;
+}
+/* #current-resin {
+    width: 60px;
+    text-align: center;
+    padding: 0 10px;
+} */

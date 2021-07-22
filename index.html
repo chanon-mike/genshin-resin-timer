@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- JavaScript -->
+    <script src="main.js"></script>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+    </script>
+
+    <!-- Title -->
+    <title>Genshin Resin Timer</title>
+</head>
+
+<body>
+    <!-- Title Section -->
+    <section id="title">
+        <div class="container-fluid">
+            <h1>Genshin Impact</h1>
+            <h1>Resin Timer</h1>
+        </div>
+    </section>
+
+    <!-- Input Section -->
+    <section id="resin-input">
+        <div class="container-fluid">
+            <div class="input-group mb-3">
+                    <span class="input-group-text text-primary bg-light">Current Resin</span>
+                    <input type="text" class="form-control" placeholder="0-159" id="current-resin">
+            </div>
+            <div >
+                    <button class="btn btn-outline-primary" type="button" id="btn-calculation" onclick="startCount()">Calculation</button>
+                    <button class="btn btn-outline-primary" type="button" id="btn-reset" onclick="resetTimer()">Reset</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Result Section -->
+    <section id="result">
+
+        <div id="full-resin">
+            <p>
+                <h3>Until Full Resin:</h3>
+                <h2 id="full-countdown">Placeholder A.M.</h2>
+            </p>
+            <p>
+                <h3>at:</h3>
+                <h2 id="full-at">Placeholder A.M.</h2>
+            </p>
+        </div>
+
+        <!-- 20 - 160 Resin row -->
+        <div class="row">
+            <div class="col-lg-3 col-md-6 p-3">
+                <h4>20</h4>
+                <h5 id="resin20">Placeholder A.M.</h5>
+            </div>
+            <div class="col-lg-3 col-md-6 p-3">
+                <h4>40</h4>
+                <h5 id="resin40">Placeholder A.M.</h5>
+            </div>
+            <div class="col-lg-3 col-md-6 p-3">
+                <h4>60</h4>
+                <h5 id="resin60">Placeholder A.M.</h5>
+            </div>
+            <div class="col-lg-3 col-md-6 p-3">
+                <h4>80</h4>
+                <h5 id="resin80">Placeholder A.M.</h5>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-3 col-md-6 p-3">
+                <h4>100</h4>
+                <h5 id="resin100">Placeholder A.M.</h5>
+            </div>
+            <div class="col-lg-3 col-md-6 p-3">
+                <h4>120</h4>
+                <h5 id="resin120">Placeholder A.M.</h5>
+            </div>
+            <div class="col-lg-3 col-md-6 p-3">
+                <h4>140</h4>
+                <h5 id="resin140">Placeholder A.M.</h5>
+            </div>
+            <div class="col-lg-3 col-md-6 p-3">
+                <h4>160</h4>
+                <h5 id="resin160">Placeholder A.M.</h5>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
