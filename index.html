@@ -12,8 +12,11 @@
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 
-    <!-- JavaScript -->
-    <script src="main.js"></script>
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@900&family=Poppins&display=swap"
+        rel="stylesheet">
 
     <!-- Bootstrap JavaScript -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -32,23 +35,26 @@
 
 <body>
     <!-- Title Section -->
-    <section id="title">
+    <section class="colored-section" id="title">
         <div class="container-fluid">
-            <h1>Genshin Impact</h1>
-            <h1>Resin Timer</h1>
+            <img src="img/Item_Fragile_Resin.png" alt="Resin" id="resin-img">
+            <h1 class="big-header">Genshin Impact</h1>
+            <h1 class="big-header">Resin Timer</h1>
         </div>
     </section>
 
     <!-- Input Section -->
     <section id="resin-input">
         <div class="container-fluid">
-            <div class="input-group mb-3">
-                    <span class="input-group-text text-primary bg-light">Current Resin</span>
-                    <input type="text" class="form-control" placeholder="0-159" id="current-resin">
+            <div class="input-group input-group-lg mb-3">
+                <span class="input-group-text bg-light">Current Resin</span>
+                <input type="text" class="form-control" placeholder="0-159" id="current-resin">
             </div>
-            <div >
-                    <button class="btn btn-outline-primary" type="button" id="btn-calculation" onclick="startCount()">Calculation</button>
-                    <button class="btn btn-outline-primary" type="button" id="btn-reset" onclick="resetTimer()">Reset</button>
+            <div>
+                <button class="btn btn-light text-primary btn-lg" type="button" id="btn-calculation"
+                    onclick="startCount()">Calculation</button>
+                <button class="btn btn-light text-danger btn-lg" type="button" id="btn-reset"
+                    onclick="resetTimer()">Reset</button>
             </div>
         </div>
     </section>
@@ -56,56 +62,66 @@
     <!-- Result Section -->
     <section id="result">
 
-        <div id="full-resin">
-            <p>
-                <h3>Until Full Resin:</h3>
-                <h2 id="full-countdown">Placeholder A.M.</h2>
-            </p>
-            <p>
-                <h3>at:</h3>
-                <h2 id="full-at">Placeholder A.M.</h2>
-            </p>
-        </div>
-
-        <!-- 20 - 160 Resin row -->
-        <div class="row">
-            <div class="col-lg-3 col-md-6 p-3">
-                <h4>20</h4>
-                <h5 id="resin20">Placeholder A.M.</h5>
+        <div class="container-fluid">
+            <div id="full-resin">
+                <p>
+                    <h3 class="time-header">Until Full Resin:</h3>
+                    <h2 class="time-body" id="full-countdown">Placeholder A.M.</h2>
+                </p>
+                <p>
+                    <h3 class="time-header">at:</h3>
+                    <h2 class="time-body" id="full-at">Placeholder A.M.</h2>
+                </p>
             </div>
-            <div class="col-lg-3 col-md-6 p-3">
-                <h4>40</h4>
-                <h5 id="resin40">Placeholder A.M.</h5>
-            </div>
-            <div class="col-lg-3 col-md-6 p-3">
-                <h4>60</h4>
-                <h5 id="resin60">Placeholder A.M.</h5>
-            </div>
-            <div class="col-lg-3 col-md-6 p-3">
-                <h4>80</h4>
-                <h5 id="resin80">Placeholder A.M.</h5>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-lg-3 col-md-6 p-3">
-                <h4>100</h4>
-                <h5 id="resin100">Placeholder A.M.</h5>
-            </div>
-            <div class="col-lg-3 col-md-6 p-3">
-                <h4>120</h4>
-                <h5 id="resin120">Placeholder A.M.</h5>
-            </div>
-            <div class="col-lg-3 col-md-6 p-3">
-                <h4>140</h4>
-                <h5 id="resin140">Placeholder A.M.</h5>
-            </div>
-            <div class="col-lg-3 col-md-6 p-3">
-                <h4>160</h4>
-                <h5 id="resin160">Placeholder A.M.</h5>
+            <!-- 20 - 160 Resin row -->
+            <div class="colored-section-2">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 resin-col">
+                        <h3 class="time-header">20</h3>
+                        <h4 class="time-body" id="resin20">Placeholder A.M.</h4>
+                    </div>
+                    <div class="col-lg-3 col-md-6 resin-col">
+                        <h3 class="time-header">40</h3>
+                        <h4 class="time-body" id="resin40">Placeholder A.M.</h4>
+                    </div>
+                    <div class="col-lg-3 col-md-6 resin-col">
+                        <h3 class="time-header">60</h3>
+                        <h4 class="time-body" id="resin60">Placeholder A.M.</h4>
+                    </div>
+                    <div class="col-lg-3 col-md-6 resin-col">
+                        <h3 class="time-header">80</h3>
+                        <h4 class="time-body" id="resin80">Placeholder A.M.</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 resin-col">
+                        <h3 class="time-header">100</h3>
+                        <h4 class="time-body" id="resin100">Placeholder A.M.</h4>
+                    </div>
+                    <div class="col-lg-3 col-md-6 resin-col">
+                        <h3 class="time-header">120</h3>
+                        <h4 class="time-body" id="resin120">Placeholder A.M.</h4>
+                    </div>
+                    <div class="col-lg-3 col-md-6 resin-col">
+                        <h3 class="time-header">140</h3>
+                        <h4 class="time-body" id="resin140">Placeholder A.M.</h4>
+                    </div>
+                    <div class="col-lg-3 col-md-6 resin-col">
+                        <h3 class="time-header">160</h3>
+                        <h4 class="time-body" id="resin160">Placeholder A.M.</h4>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+
+    <!-- Footer Section -->
+    <section class="colored-section" id="footer">
+        <span>This website is not affiliated with miHoYo. Genshin Impact, game content and materials are trademarks and copyrights of miHoYo.</span>
+    </section>
+
+    <!-- JavaScript -->
+    <script src="main.js"></script>
 </body>
 
 </html>

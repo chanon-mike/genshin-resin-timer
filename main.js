@@ -81,7 +81,7 @@ function calculateEachResin(currentResin) {
             display(fullResinTime, "resin"+allResin[i]);
         }
         else {
-            document.getElementById("resin"+allResin[i]).textContent = "#####################";
+            document.getElementById("resin"+allResin[i]).textContent = "#############";
         }
         
     }
@@ -93,7 +93,7 @@ function calculateEachResin(currentResin) {
 // ---------------------------------------------------------------------------
 function display(fullResinDate, id) {
     // Display value only one time
-    var fullResinText = fullResinDate.toDateString() + ", " + fullResinDate.toLocaleTimeString();
+    var fullResinText = fullResinDate.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
     document.getElementById(id).textContent = fullResinText;
 }
 
@@ -117,3 +117,13 @@ window.onload = function() {
     hideText.style.display = "none";
 }
 
+// Execute a function when the user releases a key on the keyboard
+document.getElementById("current-resin").addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+        // Cancel the default action, if needed
+        event.preventDefault();
+        // Trigger the button element with a click
+        startCount();
+    }
+});
